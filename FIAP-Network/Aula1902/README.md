@@ -16,13 +16,13 @@ Com o modelo acima deveriamos configurar 3 redes, definindo
 - Aplicação manual (static) de IP
 
 ## Configurando a rede 1
-
+```
 Endereço de rede: 192.168.1.0
 
 Gateway: 192.168.1.1
 
 Máscara: 255.255.255.0
-
+```
 ![alt text](image-1.png)
 
 Após a definição dessas informações abrimos o roteador e realizamos a configuração abaixo:
@@ -49,13 +49,13 @@ Realize um teste de ping
 ![alt text](image-5.png)
 
 ## Configurando a rede 2
-
+```
 Endereço de rede: 200.200.200.0
 
 Gateway: 200.200.200.1
 
 Máscara: 255.255.255.0
-
+```
 ![alt text](image-6.png)
 
 Após a definição dessa ainformações abrimos o roteador e realizamos a configuração abaixo:
@@ -108,13 +108,13 @@ Após isso, conseguimos solicitar configuração por DHCP nos dispositivos finai
 ![alt text](image-15.png)
 
 ## Configurando a rede 3
-
+```
 Endereço de rede: 201.201.201.0
 
 Gateway: 201.201.201.1
 
 Máscara: 255.255.255.0 
-
+```
 ![alt text](image-16.png)
 
 Após a definição dessa ainformações abrimos o roteador e realizamos a configuração abaixo:
@@ -131,12 +131,13 @@ Após a definição dessa ainformações abrimos o roteador e realizamos a confi
 ![alt text](image-18.png)
 
 - Siga os comandos
+    ```
     - Enable
     - Configure terminal
     - ip  dhcp pool “nome para o servidor dhcp”
     - network “endereço da rede (faixa de rede que esse servidor irá atender)”   “máscara da rede”
     - default-route “gateway da rede”
-    
+    ```
     ![alt text](image-19.png)
     
 
