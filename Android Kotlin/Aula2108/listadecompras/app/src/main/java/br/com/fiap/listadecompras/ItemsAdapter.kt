@@ -9,9 +9,9 @@ import android.widget.ImageButton
 
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
+class   ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
 
-    private val items = mutableListOf<ItemModel>()
+    private var items = listOf<ItemModel>()
 
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView = view.findViewById<TextView>(R.id.textViewItem)
@@ -38,12 +38,8 @@ class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
         holder.bind(item)
     }
 
-    fun addItem(newItem: ItemModel) {
-        items.add(newItem)
-        notifyDataSetChanged()
-    }
-    fun removeItem(item: ItemModel) {
-        items.remove(item)
+    fun updateItems(newItems: List<ItemModel>) {
+        items = newItems
         notifyDataSetChanged()
     }
 }
